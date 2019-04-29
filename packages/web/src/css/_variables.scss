@@ -1,0 +1,12 @@
+$height__header: 110px;
+$height__header__tablet: '#{$height__header / 2} + 0.5rem';
+$width__nav__slider: 1400px;
+$width__container: 1200px;
+$width__tablet: 768px;
+$width__phone: 480px;
+
+$color__body: #181818;
+$color__text: #FFFFFF;
+$color__link__mid: mix($color__text, $color__body, 50%);
+$color__header: mix($color__text, $color__body, 25%);
+$color__highlight__text: #070707;
