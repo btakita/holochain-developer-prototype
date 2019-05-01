@@ -106,6 +106,13 @@
 		margin-top: 1.8em;
 		margin-bottom: 0.8em;
 	}
+	:global(.centerig) {
+		margin: auto;
+		width: $width__centering;
+		@media (max-width: $width__centering) {
+			width: 100%;
+		}
+	}
 	:global(blockquote) {
 		margin: 1.2em 3em;
 		padding-left: 1em;

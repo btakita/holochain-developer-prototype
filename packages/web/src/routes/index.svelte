@@ -13,7 +13,7 @@
 	</p>
 </div>
 
-<div class="nav_grid">
+<div class="nav_grid centerig">
 	<a href="/beginners" class="beginners">
 		<div>→ Beginners</div>
 		<ul>
@@ -49,6 +49,7 @@
 </div>
 
 <style type="text/scss">
+	@import '~@holochain-developer-prototype/web/src/css/variables';
 	.hero {
 		text-align: center;
 	}
@@ -56,6 +57,9 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		@media (max-width: $width__centering) {
+			display: block;
+		}
 		> a {
 			display: block;
 			text-decoration: none;
@@ -63,6 +67,10 @@
 			margin-bottom: 2rem;
 			min-width: 50%;
 			max-width: 50%;
+			@media (max-width: $width__centering) {
+				min-width: auto;
+				max-width: none;
+			}
 		}
 	}
 </style>

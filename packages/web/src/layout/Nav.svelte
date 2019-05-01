@@ -17,28 +17,26 @@
 		<Item__Nav href="/" class="container__logo">
 			<img src="/favicon.ico" alt="Holochain">&nbsp;developers
 		</Item__Nav>
-		{#if !$__path__home}
-			<Item__Nav
-				href="/beginners"
-				selected="{beginners_selected}"
-				class="child_nav"
-			>Beginners</Item__Nav>
-			<Item__Nav
-				href="/use"
-				selected="{use_selected}"
-				class="child_nav"
-			>Use</Item__Nav>
-			<Item__Nav
-				href="/learn"
-				selected="{learn_selected}"
-				class="child_nav"
-			>Learn</Item__Nav>
-			<Item__Nav
-				href="/build"
-				selected="{build_selected}"
-				class="child_nav"
-			>Build</Item__Nav>
-		{/if}
+		<Item__Nav
+			href="/beginners"
+			selected="{beginners_selected}"
+			class="child_nav"
+		>Beginners</Item__Nav>
+		<Item__Nav
+			href="/use"
+			selected="{use_selected}"
+			class="child_nav"
+		>Use</Item__Nav>
+		<Item__Nav
+			href="/learn"
+			selected="{learn_selected}"
+			class="child_nav"
+		>Learn</Item__Nav>
+		<Item__Nav
+			href="/build"
+			selected="{build_selected}"
+			class="child_nav"
+		>Build</Item__Nav>
 	</Content__Nav>
 </div>
 
