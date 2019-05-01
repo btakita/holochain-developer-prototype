@@ -82,11 +82,7 @@
 	:global(.content-wrap) {
 		width: 100%;
 		margin: 0 auto;
-		padding: 0 1em;
-		@media (min-width: $width__nav__slider) {
-			width: 60rem;
-			padding: 0;
-		}
+		padding: 0 1.5rem;
 	}
 	:global(h1, h2, h3, h4, h5, h6, p, body, a, img, blockquote, pre) {
 		margin: 0;
@@ -133,85 +129,37 @@
 			text-decoration: underline;
 		}
 	}
-	:global(header) {
-		border-top: 1px dashed #d2d2d2;
-		margin: 0.7rem 0 0;
-		:global(h2) {
-			font-style: italic;
-			text-align: center;
-			font-weight: 400;
-			margin: 0.8em 0;
-			font-size: 1.4em;
-			:global(a) {
-				text-decoration: none;
-			}
-		}
-		:global(.date) {
-			text-align: center;
-			font-size: 0.8em;
-			margin-top: -0.7em;
-			text-rendering: auto;
-			letter-spacing: 1px;
-			font-variant: small-caps;
-			text-transform: lowercase;
-			font-weight: 400;
-			:global(span) {
-				background-color: $color__highlight__text;
-				padding: 0 0.7em;
-			}
-		}
-	}
-	:global(.post) {
-		margin: 2rem 0 4rem;
-		:global(hr.more) {
-			display: none;
-		}
-		:global(code) {
-			font-family: 'Anonymous Pro', monospace;
-			font-size: 0.85em;
-			/*color: #000;*/
-			&.lang-markdown {
-				color: #424242;
-				.header, .strong {
-					font-weight: bold;
-				}
-				&.emphasis {
-					font-style: italic;
-				}
-				.horizontal_rule, .link_label, .code, .header, .link_url {
-					color: #555;
-				}
-				.blockquote, .bullet {
-					color: #bbb;
-				}
-			}
-		}
-		:global(pre) {
-			font-size: 0.9em;
-			overflow: auto;
-			border: 1px dashed #d2d2d2;
-			border-radius: 0.25em;
-			margin-bottom: 1.8em;
-			padding: 1em;
-			:global(code) {
-				display: block;
-				line-height: 1.1;
-			}
-		}
-		:global(p) {
-			:global(code) {
-				padding: 0.1em 0.3em 0.2em;
-				border-radius: 0.3em;
-				position: relative;
-				top: -0.15em;
-				background: #444;
-				color: #fff;
-				white-space: nowrap;
-			}
-		}
-	}
 	:global(img) {
 		width: 100%;
+	}
+	:global(code) {
+		font-family: 'Anonymous Pro', monospace;
+		font-size: 0.85em;
+		/*color: #000;*/
+		&.lang-markdown {
+			color: #424242;
+			.header, .strong {
+				font-weight: bold;
+			}
+			&.emphasis {
+				font-style: italic;
+			}
+			.horizontal_rule, .link_label, .code, .header, .link_url {
+				color: #555;
+			}
+			.blockquote, .bullet {
+				color: #bbb;
+			}
+		}
+		&.hljs {
+			display: block;
+			padding: 1em;
+			background: $color__background__code;
+			color: $color__body;
+			border-width: 1px;
+			border-style: solid;
+			border-color: $indigo $purple $purple $indigo;
+		}
 	}
 	._layout {
 		position: relative;

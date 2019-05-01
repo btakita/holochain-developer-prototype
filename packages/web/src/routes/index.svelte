@@ -1,6 +1,8 @@
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Holochain - Developer Site</title>
 </svelte:head>
+
+<h1>Think outside the blocks!</h1>
 
 <style>
 
