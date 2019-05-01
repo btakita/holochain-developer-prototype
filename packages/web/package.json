@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@ctx-core/array": "^12.0.1",
 		"@ctx-core/google": "^4.4.6",
+		"@ctx-core/markdown": "^1.0.3",
 		"@ctx-core/nav": "^6.1.1",
 		"@ctx-core/object": "^3.3.0",
 		"@ctx-core/sapper": "^5.2.13",
