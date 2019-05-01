@@ -1,9 +1,9 @@
 $height__header: 110px;
 $height__header__tablet: '#{$height__header / 2} + 0.5rem';
 $width__widescreen: 1400px;
-$width__container: 1200px;
-$width__tablet: 768px;
-$width__phone: 480px;
+//$width__container: 1200px;
+$width__max__tablet: 768px;
+$width__max__phone: 480px;
 
 $color__body: #181818;
 $color__text: #FFFFFF;
@@ -16,3 +16,4 @@ $color__electric_indigo: #6600ff;
 $indigo: $color__electric_indigo;
 $color__electric_purple: #9900ff;
 $purple: $color__electric_purple;
+$color__a: lightblue;

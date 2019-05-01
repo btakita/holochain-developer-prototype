@@ -8,14 +8,5 @@
 	img {
 		height: $height;
 		width: $width;
-		/*
-			background: linear-gradient(
-					240deg, $indigo, $purple, $purple, $indigo, #21acba, #0fe19f, #21acba, $purple, $indigo, $indigo, $purple
-			);
-			background-size: 30% 200%;
-			-webkit-animation: HoloLogoFade 30s linear infinite;
-			-moz-animation: HoloLogoFade 30s linear infinite;
-			animation: HoloLogoFade 30s linear infinite;
-		*/
 	}
 </style>

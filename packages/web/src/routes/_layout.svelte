@@ -14,12 +14,15 @@
 	import { andand } from '@ctx-core/function'
 	import { _html__webfont__fout } from '@ctx-core/google/html'
 	import { __VERSION } from '@ctx-core/env/store'
-	import { __session__sapper, __page__sapper, __path__sapper } from '@ctx-core/sapper/store'
+	import {
+		__session__sapper,
+		__page__sapper,
+	} from '@ctx-core/sapper/store'
 	import {
 		__title,
-		__class__layout
+		__class__layout,
+		__prepend__footer,
 	} from '@holochain-developer-prototype/web/src/layout/store'
-	import { __prepend__footer } from '@holochain-developer-prototype/web/src/layout/store'
 	import Header from '@holochain-developer-prototype/web/src/layout/Header.svelte'
 	import Footer from '@holochain-developer-prototype/web/src/layout/Footer.svelte'
 	const session = getSession()
@@ -63,21 +66,19 @@
 	}
 	:global(body) {
 		font-family: 'Source Code Pro', arial, sans-serif;
-		font-size: 21px;
+		font-size: 16px;
 		line-height: 1.52;
 		background-color: $color__body;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 		color: $color__text;
-		@media (min-width: 1600px) {
-			font-size: 26px;
-		}
-		@media (max-width: 900px) {
-			font-size: 18px;
-		}
 	}
-	:global(body, a) {
+	:global(body) {
 		color: $color__text;
+	}
+	:global(a) {
+		text-decoration: none;
+		color: $color__a;
 	}
 	:global(.content-wrap) {
 		width: 100%;
@@ -124,6 +125,7 @@
 		margin-bottom: 1.52em;
 	}
 	:global(ul) {
+		padding: 0;
 		list-style: none;
 		:global(li:before) {
 			content: '— ';
