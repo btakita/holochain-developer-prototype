@@ -1,8 +1,12 @@
+<script>
+	import Header_Logo from '@holochain-developer-prototype/web/src/layout/Header_Logo.svelte'
+</script>
+
 <svelte:head>
-	<title>Holochain - Developer Site</title>
+	<title>Holochain developer portal</title>
 </svelte:head>
 
-<h1>Think outside the blocks!</h1>
+<Header_Logo></Header_Logo>
 
 <style>
 

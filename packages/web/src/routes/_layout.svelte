@@ -35,7 +35,7 @@
 </svelte:head>
 
 {#if _no__dom()}
-{@html _html__webfont__fout({ families: ['Open Sans'] })}
+{@html _html__webfont__fout({ families: ['Source Sans Pro'] })}
 {/if}
 
 <div {version} class="_layout {$__class__layout||''}">
@@ -62,7 +62,7 @@
 		}
 	}
 	:global(body) {
-		font-family: 'Open Sans', arial, sans-serif;
+		font-family: 'Source Code Pro', arial, sans-serif;
 		font-size: 21px;
 		line-height: 1.52;
 		background-color: $color__body;
@@ -90,9 +90,8 @@
 		border: 0;
 	}
 	:global(h1) {
-		font-size: 2em;
+		font-size: 1.8em;
 		margin-bottom: 1em;
-		text-align: center;
 	}
 	:global(h2) {
 		font-size: 1.6em;
@@ -123,6 +122,12 @@
 	}
 	:global(p, ul) {
 		margin-bottom: 1.52em;
+	}
+	:global(ul) {
+		list-style: none;
+		:global(li:before) {
+			content: '— ';
+		}
 	}
 	:global(a) {
 		&:hover {

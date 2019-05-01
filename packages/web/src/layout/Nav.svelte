@@ -9,9 +9,12 @@
 <Handle__Nav class="Handle__Nav__Holochain"></Handle__Nav>
 <Content__Nav class="content-wrap">
 	<Item__Nav href="/" class="container__logo">
-		<Header_Logo></Header_Logo>
+		<img src="/favicon.ico" alt="Holochain">&nbsp;developers
 	</Item__Nav>
-	<Item__Nav href="/start" selected="{$__path__sapper === '/start'}">Start</Item__Nav>
+	<Item__Nav href="/beginners" selected="{$__path__sapper === '/beginners'}">Beginners</Item__Nav>
+	<Item__Nav href="/use" selected="{$__path__sapper === '/use'}">Use</Item__Nav>
+	<Item__Nav href="/learn" selected="{$__path__sapper === '/learn'}">Learn</Item__Nav>
+	<Item__Nav href="/build" selected="{$__path__sapper === '/build'}">Build</Item__Nav>
 </Content__Nav>
 
 <style type="text/scss">
@@ -47,34 +50,19 @@
 			:global(.container) {
 				display: flex;
 				:global(.Item__Nav) {
-					padding: 0.2rem 0;
 					flex: 0;
 					&.container__logo {
 						margin-right: 1.5rem;
 					}
-					&.container__Links__SocialMedia {
-						flex: 1;
-						:global(.Links__SocialMedia) {
-							display: flex;
-							justify-content: flex-end;
-							width: 100%;
-							padding: 0 0.4rem;
-							@media(max-width: #{$width__widescreen}) {
-								justify-content: center;
-							}
-							:global(ul) {
-								width: auto;
-							}
-						}
+					img {
+						height: 20px;
+						width: 20px;
 					}
 					:global(a) {
 						margin-right: 0.8rem;
 						fill: $color__text;
 						&.selected {
 							box-shadow: 0 2px 0 $color__link__mid;
-						}
-						&.default_a {
-
 						}
 					}
 				}

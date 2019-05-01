@@ -2,13 +2,6 @@
 	import Code from '@holochain-developer-prototype/web/src/highlight.js/Code.svelte'
 </script>
 
-<h1>Core Concepts - How to Develop Holochain Apps (hApps)</h1>
-<p>So you want to build Holochain apps? Let’s explore some essential knowledge for developers.</p>
-<p>
-	For your quick reference during our journey,
-		here is a <a href="/cheat-sheet">Cheat Sheet of Holochain Commands</a>.
-</p>
-
 <h2>Getting Started (Setup)</h2>
 
 <h3>Install hcup</h3>
