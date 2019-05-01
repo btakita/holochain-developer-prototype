@@ -7,7 +7,10 @@
 </svelte:head>
 
 <div class="hero">
-	<Header_Logo></Header_Logo>
+	<div class="container__Header_Logo">
+		<Header_Logo></Header_Logo>
+	</div>
+	<h1>Endless scaling opportunity</h1>
 	<p>
 		Holochain is a framework for buliding & running secure, fully peer-to-peer distributed apps.
 	</p>
@@ -52,6 +55,14 @@
 	@import '~@holochain-developer-prototype/web/src/css/variables';
 	.hero {
 		text-align: center;
+		.container__Header_Logo {
+			margin-bottom: 5rem;
+		}
+		h1 {
+			font-family: Helvetica Arial SansSerif;
+			font-size: 2.8rem;
+			margin-bottom: 6rem;
+		}
 	}
 	.nav_grid {
 		display: flex;

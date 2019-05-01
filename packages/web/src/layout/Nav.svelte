@@ -96,7 +96,7 @@
 	}
 	@include Content__Nav__slide_from_right($width__wide: $width__max__tablet);
 	:global(.Handle__Nav) {
-		fill: $color__a__mid;
+		fill: $color__layout;
 		@media(max-width: #{$width__max__tablet}) {
 			position: absolute;
 			top: 0.6rem;
@@ -104,7 +104,7 @@
 		}
 	}
 	:global(._layout.invert) {
-		:global(.Content__Nav.content-wrap) {
+		:global(.Content__Nav) {
 			@media(max-width: #{$width__max__tablet}) {
 				background-color: invert(mix($color__layout, $color__header, 50%));
 			}
@@ -143,7 +143,8 @@
 					}
 					:global(a) {
 						margin-right: 0.8rem;
-						fill: $color__text;
+						color: $color__layout;
+						fill: $color__layout;
 						&.selected {
 							box-shadow: 0 2px 0 $color__a__mid;
 						}
@@ -155,7 +156,7 @@
 					:global(svg) {
 						height: 1.2rem;
 						width: 1.2rem;
-						fill: $color__text;
+						fill: $color__layout;
 					}
 				}
 			}
@@ -167,7 +168,7 @@
 				:global(.container) {
 					:global(.theme) {
 						:global(svg) {
-							fill: $color__text__invert;
+							fill: $color__layout__invert;
 						}
 					}
 				}
@@ -180,7 +181,7 @@
 				:global(.container) {
 					:global(.Item__Nav) {
 						:global(a) {
-							fill: $color__text__invert;
+							fill: $color__layout__invert;
 						}
 					}
 				}
