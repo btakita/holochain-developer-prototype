@@ -1,40 +1,20 @@
-<script>
-	import Code from '@holochain-developer-prototype/web/src/highlight.js/Code.svelte'
+<script context="module">
+	export async function preload({ query, params }) {
+		const response = await this.fetch('/beginners.json')
+		const json = await response.json()
+		const { a1__content__md__dir } = json
+		return {
+			a1__content__md__dir
+		}
+	}
 </script>
 
-<h2>Getting Started (Setup)</h2>
+<script>
+	export let a1__content__md__dir
+</script>
 
-<h3>Install hcup</h3>
-<p>Execute the appropriate command below (depending on your operating system) in a shell terminal:</p>
-<Code title="Linux" lang="shell">
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/holochain/hcup/master/hcup-bootstrap.sh)"
-</Code>
-<Code title="MacOS" lang="shell">
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/holochain/hcup/master/hcup-bootstrap.sh)"
-</Code>
-<Code title="Windows" lang="shell">
-	Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/holochain/hcup/master/hcup-bootstrap.ps1'))
-</Code>
+<h1>👋 Welcome</h1>
 
-<h3>Install holochain executable & the hc development tool</h3>
-<Code
-	title="Execute the command below in a shell terminal (on Linux, MacOS, or Windows)"
-	lang="shell"
->
-	hcup install holochain-dev
-</Code>
-<Code
-	title="Rust"
-	lang="shell"
->
-	// TODO
-</Code>
-<Code
-	title="npm"
-	lang="shell"
->
-	// TODO
-</Code>
-
-<h3>All right… That’s it!</h3>
-<p>You’re ready to start programming.</p>
+{#each a1__content__md__dir as content__md__dir}
+	{@html content__md__dir.html}
+{/each}

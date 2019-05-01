@@ -13,7 +13,7 @@ const readFile__promise = promisify(fs.readFile)
 const promise__readdir = promisify(fs.readdir)
 export async function _content__md__file(relative_path) {
 	if (extname(relative_path) !== '.md') return
-	const txt__path =  join(process.cwd(), relative_path)
+	const txt__path = join(process.cwd(), relative_path)
 	if (!(await exists(txt__path))) return
 	const markdown = await readFile__promise(txt__path, 'utf-8')
 	const { content, metadata } = _obj__metadata__content(markdown)
@@ -35,4 +35,19 @@ export async function _html__md__dir(dir) {
 	const a1__content__md__dir = await _a1__content__md__dir(dir)
 	const a1__html__md__dir = map(a1__content__md__dir, _andand('html'))
 	return a1__html__md__dir.join('\n\n')
+}
+export function _get__md__dir(dir) {
+	return async (req, res) => {
+		let json
+		const a1__content__md__dir = await _a1__content__md__dir(dir)
+		json = JSON.stringify({ a1__content__md__dir })
+		const headers = {
+			'Content-Type': 'application/json',
+		}
+		if (process.env.NODE_ENV !== 'development') {
+			headers['Cache-Control'] = `max-age=${5 * 60 * 1e3}` // 5 minutes
+		}
+		res.writeHead(200, headers)
+		res.end(json)
+	}
 }
