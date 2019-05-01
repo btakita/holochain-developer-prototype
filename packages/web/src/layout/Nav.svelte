@@ -4,6 +4,10 @@
 	import Handle__Nav from '@ctx-core/nav/Handle__Nav.html'
 	import Content__Nav from '@ctx-core/nav/Content__Nav.html'
 	import Item__Nav from '@ctx-core/nav/Item__Nav.html'
+	$: beginners_selected = $__path__sapper && $__path__sapper.startsWith('/beginners')
+	$: use_selected = $__path__sapper && $__path__sapper.startsWith('/use')
+	$: learn_selected = $__path__sapper && $__path__sapper.startsWith('/learn')
+	$: build_selected = $__path__sapper && $__path__sapper.startsWith('/build')
 </script>
 
 <Handle__Nav class="Handle__Nav__Holochain"></Handle__Nav>
@@ -11,10 +15,10 @@
 	<Item__Nav href="/" class="container__logo">
 		<img src="/favicon.ico" alt="Holochain">&nbsp;developers
 	</Item__Nav>
-	<Item__Nav href="/beginners" selected="{$__path__sapper === '/beginners'}">Beginners</Item__Nav>
-	<Item__Nav href="/use" selected="{$__path__sapper === '/use'}">Use</Item__Nav>
-	<Item__Nav href="/learn" selected="{$__path__sapper === '/learn'}">Learn</Item__Nav>
-	<Item__Nav href="/build" selected="{$__path__sapper === '/build'}">Build</Item__Nav>
+	<Item__Nav href="/beginners" selected="{beginners_selected}">Beginners</Item__Nav>
+	<Item__Nav href="/use" selected="{use_selected}">Use</Item__Nav>
+	<Item__Nav href="/learn" selected="{learn_selected}">Learn</Item__Nav>
+	<Item__Nav href="/build" selected="{build_selected}">Build</Item__Nav>
 </Content__Nav>
 
 <style type="text/scss">
