@@ -9,9 +9,9 @@
 	import Handle__Nav from '@ctx-core/nav/Handle__Nav.html'
 	import Content__Nav from '@ctx-core/nav/Content__Nav.html'
 	import Item__Nav from '@ctx-core/nav/Item__Nav.html'
-	import { register__sun_regular, register__moon_regular } from '@ctx-core/font-awesome'
+	import { register__sun_solid, register__moon_regular } from '@ctx-core/font-awesome'
 	import Icon from '@ctx-core/font-awesome/Icon.html'
-	register__sun_regular()
+	register__sun_solid()
 	register__moon_regular()
 	$: beginners_selected = $__path__sapper.startsWith('/beginners')
 	$: use_selected = $__path__sapper.startsWith('/use')
@@ -26,22 +26,22 @@
 			<img src="/favicon.ico" alt="Holochain">&nbsp;developers
 		</Item__Nav>
 		<Item__Nav
-			href="/beginners"
+			href="/beginners/"
 			selected="{beginners_selected}"
 			class="child_nav"
 		>Beginners</Item__Nav>
 		<Item__Nav
-			href="/use"
+			href="/use/"
 			selected="{use_selected}"
 			class="child_nav"
 		>Use</Item__Nav>
 		<Item__Nav
-			href="/learn"
+			href="/learn/"
 			selected="{learn_selected}"
 			class="child_nav"
 		>Learn</Item__Nav>
 		<Item__Nav
-			href="/build"
+			href="/build/"
 			selected="{build_selected}"
 			class="child_nav"
 		>Build</Item__Nav>
@@ -49,7 +49,7 @@
 			<a
 				href="."
 				on:click|preventDefault={invert__theme}
-			><Icon name="{$__theme__invert ? 'moon-regular' : 'sun-regular'}"></Icon></a>
+			><Icon name="{$__theme__invert ? 'moon-regular' : 'sun-solid'}"></Icon></a>
 		</div>
 	</Content__Nav>
 </div>

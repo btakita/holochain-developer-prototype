@@ -14,7 +14,7 @@
 </div>
 
 <div class="nav_grid centerig">
-	<a href="/beginners" class="beginners">
+	<a href="/beginners/" class="beginners">
 		<div>→ Beginners</div>
 		<ul>
 			<li class="highlight">Completely new to Holochain?</li>
@@ -22,7 +22,7 @@
 			<li>Why should I care?</li>
 		</ul>
 	</a>
-	<a href="/use" class="use">
+	<a href="/use/" class="use">
 		<div>→ Use</div>
 		<ul>
 			<li>What can I do with Holochain today?</li>
@@ -30,7 +30,7 @@
 			<li>How does Holochain bring hosting?</li>
 		</ul>
 	</a>
-	<a href="/learn" class="learn">
+	<a href="/learn/" class="learn">
 		<div>→ Learn</div>
 		<ul>
 			<li>Non-technical & beginner resources</li>
@@ -38,7 +38,7 @@
 			<li>holochain-rust</li>
 		</ul>
 	</a>
-	<a href="/build" class="build">
+	<a href="/build/" class="build">
 		<div>→ Build</div>
 		<ul>
 			<li>Getting started guides</li>
