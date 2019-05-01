@@ -148,8 +148,13 @@
 	}
 	:global(code) {
 		font-family: 'Anonymous Pro', monospace;
-		font-size: 0.85em;
-		/*color: #000;*/
+		display: block;
+		padding: 1em;
+		background: $color__background__code;
+		color: $color__text;
+		border-width: 1px;
+		border-style: solid;
+		border-color: $indigo $purple $purple $indigo;
 		&.lang-markdown {
 			color: #424242;
 			.header, .strong {
@@ -164,15 +169,6 @@
 			.blockquote, .bullet {
 				color: #bbb;
 			}
-		}
-		&.hljs {
-			display: block;
-			padding: 1em;
-			background: $color__background__code;
-			color: $color__body;
-			border-width: 1px;
-			border-style: solid;
-			border-color: $indigo $purple $purple $indigo;
 		}
 	}
 	._layout {
