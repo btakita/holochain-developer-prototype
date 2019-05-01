@@ -28,6 +28,11 @@
 		background: $color__background__code;
 		border-width: 1px;
 		border-style: solid;
-		border-color: #400 #700 #700 #400;
+		border-color: $indigo $purple $purple $indigo;
+	}
+	:global(._layout.invert) {
+		code {
+			background: $color__background__code__invert;
+		}
 	}
 </style>

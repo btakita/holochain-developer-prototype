@@ -22,6 +22,7 @@
 		__title,
 		__class__layout,
 		__prepend__footer,
+		__theme__invert,
 	} from '@holochain-developer-prototype/web/src/layout/store'
 	import Header from '@holochain-developer-prototype/web/src/layout/Header.svelte'
 	import Footer from '@holochain-developer-prototype/web/src/layout/Footer.svelte'
@@ -41,7 +42,11 @@
 {@html _html__webfont__fout({ families: ['Source Sans Pro'] })}
 {/if}
 
-<div {version} class="_layout {$__class__layout||''}">
+<div
+	{version}
+	class="_layout {$__class__layout||''}"
+	class:invert="{$__theme__invert}"
+>
 	<Header></Header>
 
 	<main class="content">
@@ -68,13 +73,32 @@
 		font-family: 'Source Code Pro', arial, sans-serif;
 		font-size: 16px;
 		line-height: 1.52;
-		background-color: $color__body;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
-		color: $color__text;
 	}
-	:global(body) {
+	:global(._layout) {
+		position: relative;
+		background-color: $color__layout;
 		color: $color__text;
+		min-height: 100vh;
+		&.invert {
+			background-color: $color__layout__invert;
+			color: $color__text__invert;
+			:global(a) {
+				color: $color__a__invert;
+			}
+		}
+		main {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			min-height: 600px;
+			padding: 0;
+			margin: 0 auto;
+			box-sizing: border-box;
+			z-index: 0;
+		}
 	}
 	:global(a) {
 		text-decoration: none;
@@ -171,18 +195,10 @@
 			}
 		}
 	}
-	._layout {
-		position: relative;
-		main {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			overflow: hidden;
-			min-height: 600px;
-			padding: 0;
-			margin: 0 auto;
-			box-sizing: border-box;
-			z-index: 0;
+	:global(._layout.invert) {
+		:global(code) {
+			background: $color__background__code__invert;
+			color: $color__text__invert;
 		}
 	}
 	:global(.post) {
