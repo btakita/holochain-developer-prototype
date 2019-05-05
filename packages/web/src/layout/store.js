@@ -1,14 +1,10 @@
 import { writable, derived } from 'svelte/store'
 import { __path__sapper } from '@ctx-core/sapper/store'
-import { not, _eql } from '@ctx-core/function'
+import { _eql } from '@ctx-core/function'
 export const __title = writable()
 export const __class__layout = writable()
 export const __subheader = writable()
 export const __prepend__footer = writable()
-export const __theme__invert = writable()
-export function invert__theme() {
-  __theme__invert.update(not)
-}
 export const __path__home = derived(__path__sapper, _eql('/'))
 export const __url__edit__source =
 	writable('https://github.com/btakita/holochain-developer-prototype/edit/master')

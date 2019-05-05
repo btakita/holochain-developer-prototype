@@ -1,10 +1,10 @@
 <script>
 	import { __path__sapper } from '@ctx-core/sapper/store'
+	import { __path__home } from '@holochain-developer-prototype/web/src/layout/store'
 	import {
-		__path__home,
 		__theme__invert,
-		invert__theme
-	} from '@holochain-developer-prototype/web/src/layout/store'
+		invert__theme,
+	} from '@ctx-core/theme/store'
 	import Header_Logo from './Header_Logo.svelte'
 	import Handle__Nav from '@ctx-core/nav/Handle__Nav.html'
 	import Content__Nav from '@ctx-core/nav/Content__Nav.html'
