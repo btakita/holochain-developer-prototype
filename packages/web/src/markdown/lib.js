@@ -28,8 +28,7 @@ export async function _a1__content__md__dir(dir) {
 	const a1__relative_path = map(a1__file,
 		file => join(dir, file))
 	const a1__promise__content__md__file = map(a1__relative_path, _content__md__file)
-	const a1__content__md__file = await Promise.all(a1__promise__content__md__file)
-	return a1__content__md__file
+	return Promise.all(a1__promise__content__md__file)
 }
 export async function _html__md__dir(dir) {
 	const a1__content__md__dir = await _a1__content__md__dir(dir)

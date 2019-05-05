@@ -11,6 +11,7 @@
 <script>
 	import { getSession, page } from '@sapper/app'
 	import { _no__dom } from '@ctx-core/dom'
+	import { tick } from '@ctx-core/function'
 	import { andand } from '@ctx-core/function'
 	import { _html__webfont__fout } from '@ctx-core/google/html'
 	import { __VERSION } from '@ctx-core/env/store'
@@ -26,12 +27,20 @@
 	import { __theme__invert } from '@ctx-core/theme/store'
 	import Header from '@holochain-developer-prototype/web/src/layout/Header.svelte'
 	import Footer from '@holochain-developer-prototype/web/src/layout/Footer.svelte'
+	import {
+		hljs,
+		refresh__initHighlighting,
+	} from '../highlight.js/lib'
 	const session = getSession()
 	export let version
 	__VERSION.set(version)
 	__session__sapper.set(session)
 	$: __page__sapper.set($page)
-	$: $page, __prepend__footer.set('')
+	$: {
+		$page
+		__prepend__footer.set('')
+		refresh__initHighlighting(hljs)
+	}
 </script>
 
 <svelte:head>
@@ -58,8 +67,11 @@
 	<Footer></Footer>
 </div>
 
-<style type="text/scss" @lang="sass">
+<style type="text/scss">
 	@import '~@holochain-developer-prototype/web/src/css/variables';
+	:global(*) {
+		@import '~highlight.js/styles/dracula';
+	};
 	:global(*) {
 		box-sizing: border-box;
 	}
