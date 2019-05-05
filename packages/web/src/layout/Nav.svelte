@@ -1,6 +1,6 @@
 <script>
 	import { __path__sapper } from '@ctx-core/sapper/store'
-	import { __path__home } from '@holochain-developer-prototype/web/src/layout/store'
+	import { __path__home } from '../route/store'
 	import {
 		__theme__invert,
 		invert__theme,
