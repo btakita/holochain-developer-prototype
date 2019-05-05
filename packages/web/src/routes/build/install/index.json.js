@@ -1,2 +1,6 @@
-import { _get__md__dir } from '@holochain-developer-prototype/web/src/markdown/lib'
-export const get = _get__md__dir('src/routes/build/install/_content')
+import { _get__md__dir } from '@ctx-core/markdown'
+import { hljs } from '@holochain-developer-prototype/web/src/highlight.js/lib'
+export const get = _get__md__dir({
+	dir: 'src/routes/build/install/_content',
+	hljs,
+})

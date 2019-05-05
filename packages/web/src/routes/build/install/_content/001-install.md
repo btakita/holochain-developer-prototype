@@ -47,6 +47,15 @@ npm:<br>
 <br>
 <br>
 
+<!--Testing Syntax highlighting-->
+TODO: remove - demonstrating syntax highlighting
+```javascript
+function foobar() {
+	const v = 123
+	console.info(v)
+}
+```
+
 ## All right… That’s it!
 
 You’re ready to start programming.

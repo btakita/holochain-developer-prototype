@@ -1,5 +1,4 @@
 import { _has__dom } from '@ctx-core/dom'
-import { tick } from '@ctx-core/function'
 import hljs from 'highlight.js/lib/highlight'
 import js__highlight from 'highlight.js/lib/languages/javascript'
 import json__highlight from 'highlight.js/lib/languages/json'
@@ -16,9 +15,3 @@ if (_has__dom()) {
 	window.hljs = hljs
 }
 export { hljs }
-export function refresh__initHighlighting(hljs) {
-	if (_has__dom()) {
-		hljs.initHighlighting.called = false
-		tick(hljs.initHighlighting)
-	}
-}

@@ -27,10 +27,8 @@
 	import { __theme__invert } from '@ctx-core/theme/store'
 	import Header from '@holochain-developer-prototype/web/src/layout/Header.svelte'
 	import Footer from '@holochain-developer-prototype/web/src/layout/Footer.svelte'
-	import {
-		hljs,
-		refresh__initHighlighting,
-	} from '../highlight.js/lib'
+	import { hljs } from '../highlight.js/lib'
+	import { refresh__initHighlighting } from '@ctx-core/highlight.js'
 	const session = getSession()
 	export let version
 	__VERSION.set(version)
