@@ -22,8 +22,8 @@
 		__title,
 		__class__layout,
 		__prepend__footer,
-		__theme__invert,
 	} from '@holochain-developer-prototype/web/src/layout/store'
+	import { __theme__invert } from '@ctx-core/theme/store'
 	import Header from '@holochain-developer-prototype/web/src/layout/Header.svelte'
 	import Footer from '@holochain-developer-prototype/web/src/layout/Footer.svelte'
 	const session = getSession()
