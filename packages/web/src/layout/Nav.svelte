@@ -49,7 +49,7 @@
 			<a
 				href="."
 				on:click|preventDefault={invert__theme}
-			><Icon name="{$__theme__invert ? 'moon-regular' : 'sun-solid'}"></Icon></a>
+			><Icon name="{$__theme__invert ? 'sun-solid' : 'moon-regular'}"></Icon></a>
 		</div>
 	</Content__Nav>
 </div>
