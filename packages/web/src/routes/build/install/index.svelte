@@ -1,6 +1,6 @@
 <script context="module">
 	export async function preload({ query, params }) {
-		const response = await this.fetch('/build/install.json')
+		const response = await this.fetch('/build/install/json')
 		const json = await response.json()
 		const { a1__name, a1__content__md } = json
 		return {
