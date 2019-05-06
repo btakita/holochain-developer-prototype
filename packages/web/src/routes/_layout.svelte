@@ -69,7 +69,7 @@
 	@import '~@holochain-developer-prototype/web/src/css/variables';
 	:global(*) {
 		@import '~highlight.js/styles/dracula';
-	};
+	}
 	:global(*) {
 		box-sizing: border-box;
 	}
