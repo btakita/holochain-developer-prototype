@@ -188,7 +188,6 @@
 		color: $color__text;
 		border-width: 1px;
 		border-style: solid;
-		border-color: $indigo $purple $purple $indigo;
 		&.lang-markdown {
 			color: #424242;
 			.header, .strong {
