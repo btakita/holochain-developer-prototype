@@ -2,6 +2,8 @@
 HDP_DIR_DEFAULT=~/work/holochain/holochain-developer-prototype/
 HDP_DIR="${HDP_DIR:-$HDP_DIR_DEFAULT}"
 
+tmux rename-session holochain-developer-prototype
+
 cd $HDP_DIR
 
 tmux rename-window holochain-developer-prototype
