@@ -9,7 +9,7 @@
 </script>
 
 <script>
-	import { getSession, page } from '@sapper/app'
+	import { stores } from '@sapper/app'
 	import { _no__dom } from '@ctx-core/dom'
 	import { tick } from '@ctx-core/function'
 	import { andand } from '@ctx-core/function'
@@ -29,7 +29,7 @@
 	import Footer from '@holochain-developer-prototype/web/src/layout/Footer.svelte'
 	import { hljs } from '../highlight.js/lib'
 	import { refresh__initHighlighting } from '@ctx-core/highlight.js'
-	const session = getSession()
+	const { page, session } = stores()
 	export let version
 	__VERSION.set(version)
 	__session__sapper.set(session)
