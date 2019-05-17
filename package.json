@@ -2,7 +2,7 @@
   "name": "@holochain-developer-prototype/dev",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.13.4"
+    "lerna": "^3.14.1"
   },
 	"workspaces": {
 		"packages": [
